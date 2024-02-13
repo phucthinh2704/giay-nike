@@ -24,7 +24,7 @@ body {
     padding: 20px;
     padding-top: 80px;
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 .card_heart, .card_cart{
     position: absolute;
@@ -32,6 +32,9 @@ body {
     top: 15px;
     left: 15px;
     cursor: pointer;
+}
+.card_heart:hover, .card_cart:hover {
+    color: red;
 }
 .card_cart {
     left: unset;
@@ -42,10 +45,12 @@ body {
     height: 148px;
     margin-bottom: 35px;
     /* border: 1px solid black; */
+    transition: 0.5s;
+
 }
 .card_img > img {
     width: 100%;
-    height: 100%;
+    height: 105%;
     object-fit: cover;
 }
 h2{
@@ -54,12 +59,15 @@ h2{
     text-align: center;
     font-size: 28px;
     cursor: pointer;
+    transition: 0.45s;
 }
 p{
     font-size: 25px;
     font-weight: bold;
     text-align: center;
     color: rgb(59, 58, 58);
+    /* margin-bottom: 200px; */
+    transition: 0.45s;
 }
 .card_size{
     display: flex;
@@ -75,6 +83,11 @@ p{
     font-weight: bold;
     color: rgb(62, 62, 62);
     cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.card_size span:hover {
+    background-color: black;
+    color: white;
 }
 .card_color{
     display: flex;
@@ -97,10 +110,12 @@ p{
 }
 .card_color, .card_size {
     margin-bottom: 15px;
+    transition-delay: 0.3s;
 }
 .card_action{
     display: flex;
     gap: 20px;
+    transition-delay: 0.3s;
 }
 button{
     padding: 5px 15px;
@@ -114,23 +129,19 @@ button{
 }
 .card:hover .card_img{
     transform: rotateZ(-13deg) translateY(-40px);
-    transition: 0.5s;
 }
-p {
-    margin-bottom: 200px;
-}
+
 .card:hover h2{
     transform: translate(-60px, -43px);
-    transition: 0.45s;
 }
 .card:hover p {
     transform: translate(-150px, -43px);
-    transition: 0.45s;
     margin-bottom: unset;
 }
 .card_infor {
-    visibility: hidden;
+    margin-top: 170px;
+    transition: all 0.3s linear;
 }
 .card:hover .card_infor{
-    visibility: visible;
+    margin-top: 0;
 }
